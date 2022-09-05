@@ -15,3 +15,10 @@ menuOpen.addEventListener("click", () => {
         }, 900);
     }
 });
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 900) {
+        header.style.height = "6rem";
+        toggleNav.classList.remove("nav-active");
+    }
+});

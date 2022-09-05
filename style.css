@@ -42,16 +42,18 @@ header {
     height: 4rem;
 
     position: fixed;
-    top: 2rem;
+    top: 0;
     left: 0;
 
     display: flex;
     flex-direction: column;
+
+    background-color: var(--color-bg);
 }
 
 .head {
     width: 100%;
-    padding: 0 var(--padding-vertical);
+    padding: 2rem var(--padding-vertical);
 
     display: flex;
     align-items: center;
@@ -199,4 +201,53 @@ header {
 
 main {
     margin-top: 8rem;
+}
+
+@media (min-width: 900px) {
+    header {
+        height: 6rem;
+        padding: 2rem var(--padding-vertical);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        top: 0;
+    }
+
+    .head {
+        width: fit-content;
+        padding: 0;
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .media {
+        display: none;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+
+        font-size: 1.4rem;
+    }
+
+    .nav-item {
+        width: fit-content;
+    }
+
+    .nav-item:hover {
+        background-color: transparent;
+    }
+
+    .nav-link > i {
+        display: none;
+    }
 }
